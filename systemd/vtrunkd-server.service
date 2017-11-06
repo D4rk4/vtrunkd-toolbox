@@ -1,6 +1,6 @@
 [Unit]
 Description=vtrunkd server
-Documentation=vtrunkd -h
+#Documentation=vtrunkd -h
 
 [Service]
 ExecStart=/sbin/vtrunkd -s -f /etc/vtrunkd.conf
