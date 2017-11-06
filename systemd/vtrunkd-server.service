@@ -1,0 +1,17 @@
+[Unit]
+Description=vtrunkd server
+Documentation=vtrunkd -h
+
+[Service]
+ExecStart=/sbin/vtrunkd -s -f /etc/vtrunkd.conf
+Restart=on-failure
+SuccessExitStatus=3 4
+RestartForceExitStatus=3 4
+#Nice=19
+#IOSchedulingClass=idle
+#IOSchedulingPriority=7
+#CPUSchedulingPolicy=idle
+User=root
+
+[Install]
+WantedBy=network.target
